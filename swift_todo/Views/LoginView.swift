@@ -13,7 +13,11 @@ struct LoginView: View {
     var body: some View {
         NavigationView{
             VStack{
-                HeaderView()
+                HeaderView(title: "Todo List",
+                           subtitle: "What's on your mind?",
+                           angle: 15,
+                           backgroundColor: Color.pink
+                )
                 // Form
                 Form{
                     TextField("Email Address", text: $email)
@@ -21,17 +25,9 @@ struct LoginView: View {
                     SecureField("What's the key?", text: $password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
-                    Button {
-                        // log in
-                    } label: {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(Color.blue)
-                            Text("Log in")
-                                .foregroundColor(Color.white)
-                                .bold()
-                        }
-                    }.padding()
+                    TLButton(title: "Log in", backgroundColor: Color.blue){
+                        //login action
+                    }
                 }
                 
                 // Sign Up Navigation
