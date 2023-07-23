@@ -21,6 +21,7 @@ class LoginViewViewModel: ObservableObject{
         //perform input validation
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else{
+            
             errorMessage = "Please fill up all input fields."
             return false
         }

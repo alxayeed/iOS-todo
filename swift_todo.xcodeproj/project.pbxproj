@@ -28,6 +28,7 @@
 		2A160F7A2A6CF38400510A79 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A160F792A6CF38400510A79 /* ProfileViewViewModel.swift */; };
 		2A160F7C2A6D019E00510A79 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A160F7B2A6D019E00510A79 /* HeaderView.swift */; };
 		2A160F7E2A6D14DA00510A79 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A160F7D2A6D14DA00510A79 /* TLButton.swift */; };
+		2A160F802A6D44D500510A79 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A160F7F2A6D44D500510A79 /* extensions.swift */; };
 		2AC9E8342A6CD78400B8A543 /* swift_todoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9E8332A6CD78400B8A543 /* swift_todoApp.swift */; };
 		2AC9E8362A6CD78400B8A543 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9E8352A6CD78400B8A543 /* MainView.swift */; };
 		2AC9E8382A6CD78500B8A543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9E8372A6CD78500B8A543 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		2A160F792A6CF38400510A79 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
 		2A160F7B2A6D019E00510A79 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		2A160F7D2A6D14DA00510A79 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		2A160F7F2A6D44D500510A79 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		2AC9E8302A6CD78400B8A543 /* swift_todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC9E8332A6CD78400B8A543 /* swift_todoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_todoApp.swift; sourceTree = "<group>"; };
 		2AC9E8352A6CD78400B8A543 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				2AC9E8332A6CD78400B8A543 /* swift_todoApp.swift */,
 				2AC9E8372A6CD78500B8A543 /* Assets.xcassets */,
 				2A160F542A6CEA8500510A79 /* GoogleService-Info.plist */,
+				2A160F7F2A6D44D500510A79 /* extensions.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				2A160F702A6CF31B00510A79 /* LoginViewViewModel.swift in Sources */,
 				2AC9E8362A6CD78400B8A543 /* MainView.swift in Sources */,
 				2AC9E8342A6CD78400B8A543 /* swift_todoApp.swift in Sources */,
+				2A160F802A6D44D500510A79 /* extensions.swift in Sources */,
 				2A160F6A2A6CF2BA00510A79 /* UserModel.swift in Sources */,
 				2A160F7A2A6CF38400510A79 /* ProfileViewViewModel.swift in Sources */,
 				2A160F622A6CF1E200510A79 /* TodoItemView.swift in Sources */,
