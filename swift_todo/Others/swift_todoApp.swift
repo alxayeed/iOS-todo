@@ -15,7 +15,7 @@ struct swift_todoApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
