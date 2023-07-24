@@ -12,20 +12,26 @@ struct MainView: View {
     var body: some View {
         VStack {
             if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty{
-                TabView{
-                    TodoListView()
-                        .tabItem{
-                            Label("Todo",systemImage: "house")
-                        }
-                    
-                    ProfileView()
-                        .tabItem{
-                            Label("Profile", systemImage: "person.circle")
-                        }
-                }
+                accountView
             } else{
                 LoginView()
             }
+        }
+    }
+    
+    //TODO: @ViewBuilder
+    @ViewBuilder
+    var accountView: some View {
+        TabView{
+            TodoListView()
+                .tabItem{
+                    Label("Todo",systemImage: "house")
+                }
+            
+            ProfileView()
+                .tabItem{
+                    Label("Profile", systemImage: "person.circle")
+                }
         }
     }
 }
