@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class TodoListViewViewModel: ObservableObject{
+    @Published var isPresented = false
+    
+    init(){
+        isPresented = false
+    }
+}

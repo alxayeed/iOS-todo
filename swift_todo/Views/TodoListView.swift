@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TodoListView: View {
+    @StateObject var viewModel = TodoListViewViewModel()
     var body: some View {
         NavigationView{
             VStack{}
@@ -15,9 +16,14 @@ struct TodoListView: View {
                 .toolbar{
                     Button{
                         //Action
+                        viewModel.isPresented = true
+            
                     } label: {
                         Image(systemName: "plus")
                     }
+                }
+                .sheet(isPresented: $viewModel.isPresented){
+                    TodoNewItemView(newItemPresented: $viewModel.isPresented)
                 }
         }
     }
