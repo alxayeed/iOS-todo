@@ -13,26 +13,13 @@ struct ProfileView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(Color.blue)
-                    .frame(width: 125, height: 125)
-                
-                VStack(alignment: .leading){
-                    HStack{
-                        Text("Name: ")
-                        Text("Al Sayeed")
-                    }.padding(.top, 15)
-                    HStack{
-                        Text("Email: ")
-                        Text("Al Sayeed")
-                    }.padding(.top,5)
-                    HStack{
-                        Text("Member since: ")
-                        Text("Al Sayeed")
-                    }.padding(.top,5)
+                if let user = viewModel.user {
+                    profile(user: user)
+                } else {
+                    Text("Loading...")
                 }
+                
+                
                 Button{
                     viewModel.logout()
                 } label: {
@@ -42,8 +29,34 @@ struct ProfileView: View {
                 .padding()
             
                 Spacer()
-            }
-                .navigationTitle("Profile")
+            }.navigationTitle("Profile")
+                .onAppear{
+                    viewModel.fetchUserData()
+                }
+        }
+        
+    }
+    @ViewBuilder
+    func profile(user: UserModel)-> some View {
+        Image(systemName: "person.circle")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .foregroundColor(Color.blue)
+            .frame(width: 125, height: 125)
+        
+        VStack(alignment: .leading){
+            HStack{
+                Text("Name: ").bold()
+                Text(user.name)
+            }.padding(.top, 15)
+            HStack{
+                Text("Email: ").bold()
+                Text(user.email)
+            }.padding(.top,5)
+            HStack{
+                Text("Member Since: ").bold()
+                Text("\(Date(timeIntervalSince1970: user.joined).formatted(date: .abbreviated, time: .omitted))")
+            }.padding(.top,5)
         }
     }
 }
