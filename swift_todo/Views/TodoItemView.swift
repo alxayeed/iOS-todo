@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodoItemView: View {
     @StateObject var viewModel = TodoItemViewViewModel()
-    @StateObject var mainViewModel = MainViewViewModel()
+
     
     let todoItem: TodoItemModel
     var body: some View {
@@ -26,7 +26,7 @@ struct TodoItemView: View {
             
             Button{
                 viewModel.changeStatus(
-                    userId: mainViewModel.currentUserId,
+
                     item: todoItem)
             } label: {
                 Image(systemName: todoItem.isDone ? "checkmark.circle.fill" : "circle")
