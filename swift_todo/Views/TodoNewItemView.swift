@@ -31,9 +31,17 @@ struct TodoNewItemView: View {
                 TLButton(
                     title: "Save",
                     backgroundColor: Color.indigo){
-                        viewModel.save()
-                        newItemPresented = false
+                        if(viewModel.canSave){
+                            viewModel.save()
+                            newItemPresented = false
+                        } else{
+                            viewModel.showAlert = true
+                        }
                     }.padding()
+            }.alert(isPresented: $viewModel.showAlert){
+                Alert(
+                    title: Text("Hey!"),
+                    message: Text(viewModel.alertMessage))
             }
         }.padding(.top, 100)
     }
