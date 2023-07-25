@@ -4,7 +4,7 @@
 //
 //  Created by alxayeed on 23/7/23.
 //
-
+import FirebaseAuth
 import SwiftUI
 
 struct MainView: View {
@@ -23,7 +23,7 @@ struct MainView: View {
     @ViewBuilder
     var accountView: some View {
         TabView{
-            TodoListView()
+            TodoListView(userId: viewModel.currentUserId)
                 .tabItem{
                     Label("Todo",systemImage: "house")
                 }
