@@ -48,7 +48,7 @@ struct TodoListView: View {
                         viewModel.isPresented = true
             
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: "plus.circle.fill").resizable().frame(width: 30, height: 30)
                     }
                 }
                 .sheet(isPresented: $viewModel.isPresented){
