@@ -21,7 +21,7 @@ A simple todo application built with swiftUI and firebase
 
 ## 🎥 Demo
 
-![Demo](demo.gif)
+![Demo](https://github.com/alxayeed/iOS-todo/blob/main/ss/demo.gif)
 
 <!--
 
