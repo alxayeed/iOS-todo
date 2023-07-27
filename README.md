@@ -4,7 +4,6 @@ A simple todo application built with swiftUI and firebase
 
 ## Table of Contents
 - [Demo](#-demo)
-<!-- [Live Demo](#-live-demo) -->
 - [Features](#-features)
 - [Technologies Used](#-technologies-used)
 - [Installation & Usage](#-installation--usage)
