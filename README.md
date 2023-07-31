@@ -128,7 +128,7 @@ class Motorcycle: Vehicle {
 In this example, we define a Vehicle protocol with three requirements: a numberOfWheels property and start() and stop() methods. The Car and Motorcycle classes adopt the Vehicle protocol by implementing its requirements. They provide their own implementation of the methods and properties defined in the protocol. Protocols allow us to create reusable and polymorphic code, enabling different types to conform to the same contract.
 
 #### extension
-n Swift, an extension allows you to add new functionality or behavior to an existing class, struct, enum, or protocol without modifying its original implementation.
+In Swift, an extension allows you to add new functionality or behavior to an existing class, struct, enum, or protocol without modifying its original implementation.
 
 Example:
 ```
@@ -226,13 +226,12 @@ print(circle.area) // Output: 78.53981633974483
 ```
 
 - Codable
-```
-In Swift, "codable" is a protocol used to easily convert custom types to and from JSON representation,
+- In Swift, "codable" is a protocol used to easily convert custom types to and from JSON representation,
 allowing for seamless data encoding and decoding.
 
 It's a combination of Encodable and Decodable
 For example:
-
+```
 struct Person: Codable {
     var name: String
     var age: Int
